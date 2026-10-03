@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OCF</title><link id="bs-rtl" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"><link id="bs-ltr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"><link rel="stylesheet" href="css/style.css"><script src="js/app.js"></script></head><body><div id="nav"></div>
+<header class="hero text-center"><div class="container"><h1 data-i18n="heroT"></h1><p class="lead my-3" data-i18n="heroP"></p><a href="archive.html" class="btn btn-light btn-lg" data-i18n="heroB"></a></div></header>
+<main class="container"><h2 class="sec" data-i18n="latest"></h2><div class="row g-4" id="latest"></div>
+<h2 class="sec" data-i18n="gallery"></h2><div class="row g-4" id="gal"></div>
+<h2 class="sec" data-i18n="news"></h2><ul class="news p-0"><li data-i18n="n1"></li><li data-i18n="n2"></li><li data-i18n="n3"></li></ul></main>
+<div id="foot"></div><script src="js/bootstrap.bundle.min.js"></script></body></html><script>window.page=function(){
+$('#latest').innerHTML=D.filter(function(i){return i.type=='article'}).slice(0,3).map(card).join('');
+$('#gal').innerHTML=D.filter(function(i){return i.type!='article'}).map(function(i){return card(i)}).join('')}</script>
